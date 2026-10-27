@@ -99,36 +99,48 @@ def amersfoort():
 
 def rijssen():
     url = "https://www.gergemrijssen.nl/terugluisteren/"
-    html = haal_pagina(url)
-    soup = BeautifulSoup(html, "html.parser")
+    soup = BeautifulSoup(haal_pagina(url), "html.parser")
 
     preken, gezien = [], set()
     gemeente = "Rijssen"
-    buffer, laatste_tekst = [], ""
+    buffer, laatste = [], ""
 
-    def voeg_toe(audio_url, eigen_titel=""):
-        nonlocal laatste_tekst
-        audio_url = urljoin(url, audio_url)
-        if audio_url in gezien:
+    def voeg_toe(audio_url):
+        nonlocal laatste
+        audio_url = urljoin(url, audio_url.replace("\\/", "/"))
+        # Alleen echte opnames, geen golfvorm-bestanden e.d.
+        if "/opname/" not in audio_url or audio_url in gezien:
             return
         gezien.add(audio_url)
         if buffer:
-            laatste_tekst = " ".join(buffer)
+            laatste = " ".join(buffer)
             buffer.clear()
-        tekst = eigen_titel or laatste_tekst
-        datum = nl_datum(tekst) or nl_datum(laatste_tekst)
-        titel = DATUM_RE.sub("", tekst)
-        titel = re.sub(r"^(zondag|woensdag|maandag|dinsdag|donderdag|vrijdag|zaterdag)\s*", "", titel.strip(), flags=re.I)
-        if not titel.strip():
-            titel = Path(unquote(urlparse(audio_url).path)).stem
-        preken.append({"kerk": gemeente, "datum": datum, "tijd": "", "titel": titel, "url": audio_url})
+        datum = nl_datum(laatste)
+        tekst = DATUM_RE.sub("", laatste).strip()
+        tekst = re.sub(r"^(zondag|maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag)\s*", "", tekst, flags=re.I)
+        naam = audio_url.lower()
+        tijd = ""
+        if "morgendienst" in naam:
+            tijd = "09.30"
+            m = re.search(r"morgendienst\s*:?\s*(.*?)(?=avonddienst|$)", tekst, re.I | re.S)
+            if m and m.group(1).strip():
+                tekst = m.group(1)
+        elif "avonddienst" in naam:
+            tijd = "17.00"
+            m = re.search(r"avonddienst\s*:?\s*(.*)$", tekst, re.I | re.S)
+            if m and m.group(1).strip():
+                tekst = m.group(1)
+        if "weekdienst" in naam or "zendingsdienst" in naam:
+            tijd = "19.30"
+        titel = tekst.strip() or Path(unquote(urlparse(audio_url).path)).stem
+        preken.append({"kerk": gemeente, "datum": datum, "tijd": tijd, "titel": titel, "url": audio_url})
 
     for el in soup.find_all(True):
         if el.name == "h2":
             kop = el.get_text(" ", strip=True)
             if "rijssen-" in kop.lower():
                 gemeente = kop.split("|")[0].strip()
-                buffer, laatste_tekst = [], ""
+                buffer, laatste = [], ""
             continue
         if el.name == "p":
             t = el.get_text(" ", strip=True)
@@ -136,19 +148,12 @@ def rijssen():
                 buffer.append(t)
         if el.name == "script" and el.string:
             for u in AUDIO_URL_RE.findall(el.string):
-                voeg_toe(u.replace("\\/", "/"))
+                voeg_toe(u)
             continue
-        for attr, waarde in el.attrs.items():
-            waarden = waarde if isinstance(waarde, list) else [waarde]
-            for w in waarden:
+        for waarde in el.attrs.values():
+            for w in (waarde if isinstance(waarde, list) else [waarde]):
                 if isinstance(w, str) and AUDIO_ATTR_RE.search(w):
-                    eigen = el.get("data-title") or el.get("title") or ""
-                    voeg_toe(w, eigen)
-
-    # Vangnet: audio-adressen die nergens anders gevonden zijn
-    gemeente = "Rijssen"
-    for u in AUDIO_URL_RE.findall(html):
-        voeg_toe(u.replace("\\/", "/"))
+                    voeg_toe(w)
     return preken
 
 
