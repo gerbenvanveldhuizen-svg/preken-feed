@@ -157,6 +157,65 @@ def rijssen():
     return preken
 
 
+# ---------------------------------------------------------------- rooster (kerktijden.nl)
+
+KERKTIJDEN_IDS = {"Rijssen-Noord": 257, "Rijssen-West": 285, "Rijssen-Zuid": 284}
+KERKTIJDEN_API = "https://api.kerktijden.nl/api/gathering/GetGatheringsForWidget"
+
+
+def persoon_naam(p):
+    delen = [p.get("initials") or p.get("firstname") or "", p.get("insertion") or "", p.get("lastname") or ""]
+    naam = " ".join(d for d in delen if d).strip()
+    return ("Ds. " + naam) if naam else ""
+
+
+def werk_rooster_bij(rooster):
+    """Slaat de komende diensten met voorganger op; het rooster toont geen verleden."""
+    for gemeente, cid in KERKTIJDEN_IDS.items():
+        try:
+            r = requests.get(KERKTIJDEN_API, params={"communityId": cid, "weeks": 4},
+                             headers=HEADERS, timeout=30)
+            r.raise_for_status()
+            diensten = r.json()
+        except Exception as e:
+            print(f"[rooster {gemeente}] FOUT: {e}")
+            continue
+        for g in diensten if isinstance(diensten, list) else []:
+            if g.get("cancelled") or not g.get("startTime"):
+                continue
+            soorten = [t.get("name", "") for t in g.get("gatheringTypes") or []]
+            namen = [persoon_naam(p) for p in g.get("persons") or []
+                     if any(rol.get("name") == "Voorganger" for rol in p.get("roles") or [])]
+            namen = [n for n in namen if n]
+            if namen:
+                wie = " en ".join(namen)
+            elif any("lees" in s.lower() for s in soorten):
+                wie = "Leesdienst"
+            else:
+                continue
+            rooster[f"{gemeente}|{g['startTime'][:16]}"] = wie
+    # alleen het laatste jaar bewaren
+    grens = (datetime.date.today() - datetime.timedelta(days=365)).isoformat()
+    for sleutel in [k for k in rooster if k.split("|")[1][:10] < grens]:
+        del rooster[sleutel]
+    return rooster
+
+
+def zoek_voorganger(rooster, preek):
+    if not preek["datum"] or preek["kerk"] not in KERKTIJDEN_IDS:
+        return ""
+    dag = preek["datum"].isoformat()
+    diensten = sorted((k.split("|")[1][11:16], v) for k, v in rooster.items()
+                      if k.startswith(preek["kerk"] + "|" + dag))
+    if not diensten:
+        return ""
+    if preek["tijd"] == "09.30":   # morgendienst: eerste dienst voor 12 uur
+        kandidaten = [v for t, v in diensten if t < "12:00"]
+        return kandidaten[0] if kandidaten else ""
+    kandidaten = [v for t, v in diensten if t >= "16:00"]   # avond- of weekdienst
+    return kandidaten[-1] if kandidaten else ""
+
+
 BRONNEN = [("Amersfoort", amersfoort), ("Rijssen", rijssen)]
 
 
@@ -170,6 +229,7 @@ NL = ZoneInfo("Europe/Amsterdam")
 HIER = Path(__file__).resolve().parent
 AFLEVERINGEN = HIER / "afleveringen.json"
 FEED = HIER / "feed.xml"
+ROOSTER = HIER / "voorgangers.json"
 MAX_AFLEVERINGEN = 400
 
 
@@ -217,6 +277,13 @@ def main():
     if AFLEVERINGEN.exists():
         afleveringen = json.loads(AFLEVERINGEN.read_text(encoding="utf-8"))
     bekend = {a["guid"] for a in afleveringen}
+    bekend |= {f'{a["kerk"]}|{a["url"]}|{a["pub"][:16]}' for a in afleveringen}
+
+    rooster = {}
+    if ROOSTER.exists():
+        rooster = json.loads(ROOSTER.read_text(encoding="utf-8"))
+    rooster = werk_rooster_bij(rooster)
+    ROOSTER.write_text(json.dumps(rooster, indent=1, ensure_ascii=False, sort_keys=True), encoding="utf-8")
 
     nieuw = 0
     for naam, functie in BRONNEN:
@@ -227,14 +294,20 @@ def main():
             continue
         print(f"[{naam}] {len(preken)} preken gevonden")
         for preek in preken:
+            wie = zoek_voorganger(rooster, preek)
+            if wie and wie.split()[-1].lower() not in preek["titel"].lower():
+                preek["titel"] = f"{wie} - {preek['titel']}"
+            pub = publicatietijd(preek).isoformat()
+            sleutel = f'{preek["kerk"]}|{preek["url"]}|{pub[:16]}'
             guid = preek["url"] + "|" + preek["titel"]
             status = "bekend"
-            if guid not in bekend:
+            if guid not in bekend and sleutel not in bekend:
                 afleveringen.append({
                     "guid": guid, "kerk": preek["kerk"], "titel": schoon(preek["titel"], 200),
-                    "url": preek["url"], "pub": publicatietijd(preek).isoformat(),
+                    "url": preek["url"], "pub": pub,
                 })
                 bekend.add(guid)
+                bekend.add(sleutel)
                 nieuw += 1
                 status = "NIEUW"
             print(f"   {status:6} {preek['kerk']}: {preek['titel'][:80]}")
