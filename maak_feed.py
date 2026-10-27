@@ -231,6 +231,7 @@ AFLEVERINGEN = HIER / "afleveringen.json"
 FEED = HIER / "feed.xml"
 ROOSTER = HIER / "voorgangers.json"
 MAX_AFLEVERINGEN = 400
+ICOON_URL = "https://gerbenvanveldhuizen-svg.github.io/preken-feed/icoon.png"
 
 
 def publicatietijd(preek):
@@ -264,6 +265,8 @@ def schrijf_feed(afleveringen):
   <description>Persoonlijke feed met links naar preken van Ger. Gem. Amersfoort en Ger. Gem. Rijssen.</description>
   <language>nl</language>
   <itunes:block>Yes</itunes:block>
+  <itunes:image href="{ICOON_URL}"/>
+  <image><url>{ICOON_URL}</url><title>Preken Amersfoort en Rijssen</title><link>https://www.gergemamersfoort.nl/kerkdiensten/preken-naluisteren</link></image>
   <lastBuildDate>{format_datetime(datetime.datetime.now(NL))}</lastBuildDate>
 {chr(10).join(items)}
  </channel>
