@@ -30,7 +30,7 @@ d = ImageDraw.Draw(img)
 d.rounded_rectangle((60, 60, W - 60, W - 60), radius=90, outline=GOUD, width=10)
 
 # Opengeslagen Bijbel
-cx, top, breed, hoog = W // 2, 300, 300, 330
+cx, top, breed, hoog = W // 2, 340, 300, 330
 for kant in (-1, 1):
     buiten = cx + kant * breed
     blad = [(cx, top + 40), (buiten, top), (buiten, top + hoog), (cx, top + hoog + 40)]
@@ -52,16 +52,10 @@ d.polygon([(cx + 18, top + hoog + 30), (cx + 48, top + hoog + 22),
 titel = "Preken"
 f = font("DejaVuSerif-Bold.ttf", 250)
 tw = d.textlength(titel, font=f)
-d.text(((W - tw) / 2, 790), titel, font=f, fill=CREME)
+d.text(((W - tw) / 2, 840), titel, font=f, fill=CREME)
 
 # Gouden scheidingslijn
-d.line([(W / 2 - 230, 1110), (W / 2 + 230, 1110)], fill=GOUD, width=6)
-
-# Ondertitel
-sub = "Amersfoort  ·  Rijssen"
-fs = font("DejaVuSans.ttf", 70)
-sw = d.textlength(sub, font=fs)
-d.text(((W - sw) / 2, 1150), sub, font=fs, fill=GOUD)
+d.line([(W / 2 - 230, 1170), (W / 2 + 230, 1170)], fill=GOUD, width=6)
 
 img.save(Path(__file__).resolve().parent / "icoon.png", optimize=True)
 print("icoon.png gemaakt")
