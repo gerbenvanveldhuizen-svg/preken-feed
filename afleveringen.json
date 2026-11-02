@@ -1,10 +1,52 @@
 [
  {
+  "guid": "https://meeluisteren.gergemrijssen.nl/opname/public/rijssen-noord-oneven-week-avonddienst.mp3|Ds. A.T. Huijser - De leer van de Goddelijke drie-eenheid (Zondag 8 )",
+  "kerk": "Rijssen-Noord",
+  "titel": "Ds. A.T. Huijser - De leer van de Goddelijke drie-eenheid (Zondag 8 )",
+  "url": "https://meeluisteren.gergemrijssen.nl/opname/public/rijssen-noord-oneven-week-avonddienst.mp3",
+  "pub": "2026-11-01T17:00:00+01:00"
+ },
+ {
+  "guid": "https://meeluisteren.gergemrijssen.nl/opname/public/rijssen-west-oneven-week-avonddienst.mp3|Ds. P.D. den Haan - De Middelaar bekendgemaakt (Zondag 6)",
+  "kerk": "Rijssen-West",
+  "titel": "Ds. P.D. den Haan - De Middelaar bekendgemaakt (Zondag 6)",
+  "url": "https://meeluisteren.gergemrijssen.nl/opname/public/rijssen-west-oneven-week-avonddienst.mp3",
+  "pub": "2026-11-01T17:00:00+01:00"
+ },
+ {
+  "guid": "https://meeluisteren.gergemrijssen.nl/opname/public/rijssen-zuid-oneven-week-avonddienst.mp3|Ds. S.W. Janse - Uw Naam worde geheiligd (Zondag 47)",
+  "kerk": "Rijssen-Zuid",
+  "titel": "Ds. S.W. Janse - Uw Naam worde geheiligd (Zondag 47)",
+  "url": "https://meeluisteren.gergemrijssen.nl/opname/public/rijssen-zuid-oneven-week-avonddienst.mp3",
+  "pub": "2026-11-01T17:00:00+01:00"
+ },
+ {
   "guid": "https://www.gergemamersfoort.nl/mp3/2026-11-01-16.30-.-.mp3?download=true|De Heere Jezus als de hervormer van des Vaders huis - Leesdienst: Ds. W. Harinck - Joh. 2: 13-17",
   "kerk": "Amersfoort",
   "titel": "De Heere Jezus als de hervormer van des Vaders huis - Leesdienst Ds. W. Harinck - Joh. 2 13-17",
   "url": "https://www.gergemamersfoort.nl/mp3/2026-11-01-16.30-.-.mp3?download=true",
   "pub": "2026-11-01T16:30:00+01:00"
+ },
+ {
+  "guid": "https://meeluisteren.gergemrijssen.nl/opname/public/rijssen-noord-oneven-week-morgendienst.mp3|Ds. A.T. Huijser - Bediening Heilige Doop Geeft Gode wat Gods is (Mattheüs  22 : 21b )",
+  "kerk": "Rijssen-Noord",
+  "titel": "Ds. A.T. Huijser - Bediening Heilige Doop Geeft Gode wat Gods is (Mattheüs 22 21b )",
+  "url": "https://meeluisteren.gergemrijssen.nl/opname/public/rijssen-noord-oneven-week-morgendienst.mp3",
+  "pub": "2026-11-01T09:30:00+01:00"
+ },
+ {
+  "guid": "https://meeluisteren.gergemrijssen.nl/opname/public/rijssen-west-oneven-week-morgendienst.mp3|Ds. P.D. den Haan - Bevestiging ambtsdragers De HEERE verlost Israël (1 Samuël 14 : 15 – 17 )",
+  "kerk": "Rijssen-West",
+  "titel": "Ds. P.D. den Haan - Bevestiging ambtsdragers De HEERE verlost Israël (1 Samuël 14 15 – 17 )",
+  "url": "https://meeluisteren.gergemrijssen.nl/opname/public/rijssen-west-oneven-week-morgendienst.mp3",
+  "pub": "2026-11-01T09:30:00+01:00"
+ },
+ {
+  "guid": "https://meeluisteren.gergemrijssen.nl/opname/public/rijssen-zuid-oneven-week-morgendienst.mp3|Ds. S.W. Janse - Hervormingsdienst De kracht van het Evangelie (Romeinen 1 : 16 – 17)",
+  "kerk": "Rijssen-Zuid",
+  "titel": "Ds. S.W. Janse - Hervormingsdienst De kracht van het Evangelie (Romeinen 1 16 – 17)",
+  "url": "https://meeluisteren.gergemrijssen.nl/opname/public/rijssen-zuid-oneven-week-morgendienst.mp3",
+  "pub": "2026-11-01T09:30:00+01:00"
  },
  {
   "guid": "https://meeluisteren.gergemrijssen.nl/opname/public/rijssen-noord-even-week-avonddienst.mp3|Vervolgonderwijs over het ware geloof  (Zondag 7     |  vr/antw. 22 en 23 )",
