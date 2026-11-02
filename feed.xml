@@ -8,7 +8,7 @@
   <itunes:block>Yes</itunes:block>
   <itunes:image href="https://gerbenvanveldhuizen-svg.github.io/preken-feed/icoon.png"/>
   <image><url>https://gerbenvanveldhuizen-svg.github.io/preken-feed/icoon.png</url><title>Preken Amersfoort en Rijssen</title><link>https://www.gergemamersfoort.nl/kerkdiensten/preken-naluisteren</link></image>
-  <lastBuildDate>Mon, 02 Nov 2026 14:15:59 +0100</lastBuildDate>
+  <lastBuildDate>Tue, 03 Nov 2026 00:48:58 +0100</lastBuildDate>
   <item>
    <title>Rijssen-Noord: Ds. A.T. Huijser - De leer van de Goddelijke drie-eenheid (Zondag 8 )</title>
    <description>Rijssen-Noord - Ds. A.T. Huijser - De leer van de Goddelijke drie-eenheid (Zondag 8 )</description>
@@ -57,6 +57,20 @@
    <guid isPermaLink="false">https://meeluisteren.gergemrijssen.nl/opname/public/rijssen-zuid-oneven-week-morgendienst.mp3|Ds. S.W. Janse - Hervormingsdienst De kracht van het Evangelie (Romeinen 1 : 16 – 17)</guid>
    <pubDate>Sun, 01 Nov 2026 09:30:00 +0100</pubDate>
    <enclosure url="https://meeluisteren.gergemrijssen.nl/opname/public/rijssen-zuid-oneven-week-morgendienst.mp3" length="0" type="audio/mpeg"/>
+  </item>
+  <item>
+   <title>Amersfoort: Leespreek Ds. G. van Maanen - Lezen 2 Kronieken 33 vers 1-20</title>
+   <description>Amersfoort - Leespreek Ds. G. van Maanen - Lezen 2 Kronieken 33 vers 1-20</description>
+   <guid isPermaLink="false">https://www.gergemamersfoort.nl/mp3/2026-11-01-09.30-.-1.mp3?download=true|Leespreek: Ds. G. van Maanen - Lezen: 2 Kronieken 33 vers 1-20</guid>
+   <pubDate>Sun, 01 Nov 2026 09:30:00 +0100</pubDate>
+   <enclosure url="https://www.gergemamersfoort.nl/mp3/2026-11-01-09.30-.-1.mp3?download=true" length="0" type="audio/mpeg"/>
+  </item>
+  <item>
+   <title>Amersfoort: De Heere Jezus als de hervormer van des Vaders huis - Leespreek Ds. W. Harinck - Lezen Joh. 2 13-25</title>
+   <description>Amersfoort - De Heere Jezus als de hervormer van des Vaders huis - Leespreek Ds. W. Harinck - Lezen Joh. 2 13-25</description>
+   <guid isPermaLink="false">https://www.gergemamersfoort.nl/mp3/2026-11-01-16.30-.-1.mp3?download=true|De Heere Jezus als de hervormer van des Vaders huis - Leespreek: Ds. W. Harinck - Lezen: Joh. 2: 13-25</guid>
+   <pubDate>Sun, 01 Nov 2026 09:30:00 +0100</pubDate>
+   <enclosure url="https://www.gergemamersfoort.nl/mp3/2026-11-01-16.30-.-1.mp3?download=true" length="0" type="audio/mpeg"/>
   </item>
   <item>
    <title>Rijssen-Noord: Vervolgonderwijs over het ware geloof (Zondag 7 vr antw. 22 en 23 )</title>
