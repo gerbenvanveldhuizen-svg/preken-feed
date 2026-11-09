@@ -18,6 +18,9 @@
  "Rijssen-Noord|2026-11-29T14:30": "Leesdienst",
  "Rijssen-Noord|2026-11-29T18:30": "Ds. A.T. Huijser",
  "Rijssen-Noord|2026-12-02T19:30": "Ds. A.T. Huijser",
+ "Rijssen-Noord|2026-12-06T09:30": "Ds. A.T. Huijser",
+ "Rijssen-Noord|2026-12-06T14:30": "Leesdienst",
+ "Rijssen-Noord|2026-12-06T18:30": "Ds. A.T. Huijser",
  "Rijssen-West|2026-11-01T09:30": "Ds. P.D. den Haan",
  "Rijssen-West|2026-11-01T18:30": "Ds. P.D. den Haan",
  "Rijssen-West|2026-11-04T09:30": "Ds. P.D. den Haan",
@@ -32,6 +35,8 @@
  "Rijssen-West|2026-11-27T14:00": "Ds. P.D. den Haan",
  "Rijssen-West|2026-11-29T09:30": "Ds. P.D. den Haan",
  "Rijssen-West|2026-11-29T18:30": "Ds. P.D. den Haan",
+ "Rijssen-West|2026-12-06T09:30": "Ds. P.D. den Haan",
+ "Rijssen-West|2026-12-06T18:30": "Ds. P.D. den Haan",
  "Rijssen-Zuid|2026-11-01T09:30": "Ds. S.W. Janse",
  "Rijssen-Zuid|2026-11-01T14:30": "Leesdienst",
  "Rijssen-Zuid|2026-11-01T18:30": "Ds. S.W. Janse",
@@ -50,5 +55,8 @@
  "Rijssen-Zuid|2026-11-25T19:30": "Ds. S.W. Janse",
  "Rijssen-Zuid|2026-11-29T09:30": "Ds. S.W. Janse",
  "Rijssen-Zuid|2026-11-29T14:30": "Leesdienst",
- "Rijssen-Zuid|2026-11-29T18:30": "Ds. S.W. Janse"
+ "Rijssen-Zuid|2026-11-29T18:30": "Ds. S.W. Janse",
+ "Rijssen-Zuid|2026-12-06T09:30": "Ds. S.W. Janse",
+ "Rijssen-Zuid|2026-12-06T14:30": "Leesdienst",
+ "Rijssen-Zuid|2026-12-06T18:30": "Ds. S.W. Janse"
 }
