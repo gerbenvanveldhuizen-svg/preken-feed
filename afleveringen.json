@@ -1,5 +1,61 @@
 [
  {
+  "guid": "https://meeluisteren.gergemrijssen.nl/opname/public/rijssen-noord-oneven-week-avonddienst.mp3|Ds. A.T. Huijser - De onderhoudende en regerende Vader (Zondag 10 )",
+  "kerk": "Rijssen-Noord",
+  "titel": "Ds. A.T. Huijser - De onderhoudende en regerende Vader (Zondag 10 )",
+  "url": "https://meeluisteren.gergemrijssen.nl/opname/public/rijssen-noord-oneven-week-avonddienst.mp3",
+  "pub": "2026-11-15T17:00:00+01:00"
+ },
+ {
+  "guid": "https://meeluisteren.gergemrijssen.nl/opname/public/rijssen-west-oneven-week-avonddienst.mp3|Ds. P.D. den Haan - De verborgenheid van de drie-eenheid van God (Zondag 8)",
+  "kerk": "Rijssen-West",
+  "titel": "Ds. P.D. den Haan - De verborgenheid van de drie-eenheid van God (Zondag 8)",
+  "url": "https://meeluisteren.gergemrijssen.nl/opname/public/rijssen-west-oneven-week-avonddienst.mp3",
+  "pub": "2026-11-15T17:00:00+01:00"
+ },
+ {
+  "guid": "https://meeluisteren.gergemrijssen.nl/opname/public/rijssen-zuid-oneven-week-avonddienst.mp3|Ds. S.W. Janse - UUw wil geschiede (Zondag 49)",
+  "kerk": "Rijssen-Zuid",
+  "titel": "Ds. S.W. Janse - UUw wil geschiede (Zondag 49)",
+  "url": "https://meeluisteren.gergemrijssen.nl/opname/public/rijssen-zuid-oneven-week-avonddienst.mp3",
+  "pub": "2026-11-15T17:00:00+01:00"
+ },
+ {
+  "guid": "https://www.gergemamersfoort.nl/mp3/2026-11-15-09.30-.-.mp3?download=true|H.C. Zondag 38 Het vierde gebod - Ds. W. Visscher - Lezen: Hebreeën 5",
+  "kerk": "Amersfoort",
+  "titel": "H.C. Zondag 38 Het vierde gebod - Ds. W. Visscher - Lezen Hebreeën 5",
+  "url": "https://www.gergemamersfoort.nl/mp3/2026-11-15-09.30-.-.mp3?download=true",
+  "pub": "2026-11-15T09:30:00+01:00"
+ },
+ {
+  "guid": "https://www.gergemamersfoort.nl/mp3/2026-11-15-09.30-.-1.mp3?download=true|De Heere daalde neder - Ds. W. Visscher - Psalm 18: 10",
+  "kerk": "Amersfoort",
+  "titel": "De Heere daalde neder - Ds. W. Visscher - Psalm 18 10",
+  "url": "https://www.gergemamersfoort.nl/mp3/2026-11-15-09.30-.-1.mp3?download=true",
+  "pub": "2026-11-15T09:30:00+01:00"
+ },
+ {
+  "guid": "https://meeluisteren.gergemrijssen.nl/opname/public/rijssen-noord-oneven-week-morgendienst.mp3|Ds. A.T. Huijser - Gods getuigenis van Zijn Zoon (1 Johannes 5 : 10 t/m 11 )",
+  "kerk": "Rijssen-Noord",
+  "titel": "Ds. A.T. Huijser - Gods getuigenis van Zijn Zoon (1 Johannes 5 10 t m 11 )",
+  "url": "https://meeluisteren.gergemrijssen.nl/opname/public/rijssen-noord-oneven-week-morgendienst.mp3",
+  "pub": "2026-11-15T09:30:00+01:00"
+ },
+ {
+  "guid": "https://meeluisteren.gergemrijssen.nl/opname/public/rijssen-west-oneven-week-morgendienst.mp3|Ds. P.D. den Haan - Bediening Heilige Doop Gods zorg voor Zijn verbond (1 Samuël 15 : 2)",
+  "kerk": "Rijssen-West",
+  "titel": "Ds. P.D. den Haan - Bediening Heilige Doop Gods zorg voor Zijn verbond (1 Samuël 15 2)",
+  "url": "https://meeluisteren.gergemrijssen.nl/opname/public/rijssen-west-oneven-week-morgendienst.mp3",
+  "pub": "2026-11-15T09:30:00+01:00"
+ },
+ {
+  "guid": "https://meeluisteren.gergemrijssen.nl/opname/public/rijssen-zuid-oneven-week-morgendienst.mp3|Ds. S.W. Janse - Saul heeft Davids ondergang op het oog (1 Samuel 18 : 9)",
+  "kerk": "Rijssen-Zuid",
+  "titel": "Ds. S.W. Janse - Saul heeft Davids ondergang op het oog (1 Samuel 18 9)",
+  "url": "https://meeluisteren.gergemrijssen.nl/opname/public/rijssen-zuid-oneven-week-morgendienst.mp3",
+  "pub": "2026-11-15T09:30:00+01:00"
+ },
+ {
   "guid": "https://meeluisteren.gergemrijssen.nl/opname/public/rijssen-zuid-weekdienst-avonddienst.mp3|Ds. S.W. Janse - Een wonderlijk natuurverschijnsel (Jozua 10 : 12b)",
   "kerk": "Rijssen-Zuid",
   "titel": "Ds. S.W. Janse - Een wonderlijk natuurverschijnsel (Jozua 10 12b)",
