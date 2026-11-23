@@ -8,7 +8,14 @@
   <itunes:block>Yes</itunes:block>
   <itunes:image href="https://gerbenvanveldhuizen-svg.github.io/preken-feed/icoon.png"/>
   <image><url>https://gerbenvanveldhuizen-svg.github.io/preken-feed/icoon.png</url><title>Preken Amersfoort en Rijssen</title><link>https://www.gergemamersfoort.nl/kerkdiensten/preken-naluisteren</link></image>
-  <lastBuildDate>Sun, 22 Nov 2026 23:21:10 +0100</lastBuildDate>
+  <lastBuildDate>Mon, 23 Nov 2026 16:46:52 +0100</lastBuildDate>
+  <item>
+   <title>Rijssen-Zuid: Ds. A.T. Huijser - De komst van de HEERE tot Zijn volk (Hosea 6 3b)</title>
+   <description>Rijssen-Zuid - Ds. A.T. Huijser - De komst van de HEERE tot Zijn volk (Hosea 6 3b)</description>
+   <guid isPermaLink="false">https://meeluisteren.gergemrijssen.nl/opname/public/rijssen-zuid-even-week-avonddienst.mp3|Ds. A.T. Huijser - De komst van de HEERE tot Zijn volk (Hosea 6 : 3b)</guid>
+   <pubDate>Sun, 22 Nov 2026 17:00:00 +0100</pubDate>
+   <enclosure url="https://meeluisteren.gergemrijssen.nl/opname/public/rijssen-zuid-even-week-avonddienst.mp3" length="0" type="audio/mpeg"/>
+  </item>
   <item>
    <title>Amersfoort: H.C. Zondag 39 Het vijfde gebod - Ds. W. Visscher - Lezen Spreuken 1</title>
    <description>Amersfoort - H.C. Zondag 39 Het vijfde gebod - Ds. W. Visscher - Lezen Spreuken 1</description>
@@ -22,6 +29,13 @@
    <guid isPermaLink="false">https://www.gergemamersfoort.nl/mp3/2026-11-22-09.30-.-1.mp3?download=true|Hij verloste mij - Ds. W. Visscher, - Psalm 18: 17-20</guid>
    <pubDate>Sun, 22 Nov 2026 09:30:00 +0100</pubDate>
    <enclosure url="https://www.gergemamersfoort.nl/mp3/2026-11-22-09.30-.-1.mp3?download=true" length="0" type="audio/mpeg"/>
+  </item>
+  <item>
+   <title>Rijssen-Zuid: Ds. A.T. Huijser - Gods lijdensschool (Hebreeën 12 11)</title>
+   <description>Rijssen-Zuid - Ds. A.T. Huijser - Gods lijdensschool (Hebreeën 12 11)</description>
+   <guid isPermaLink="false">https://meeluisteren.gergemrijssen.nl/opname/public/rijssen-zuid-even-week-morgendienst.mp3|Ds. A.T. Huijser - Gods lijdensschool (Hebreeën 12 : 11)</guid>
+   <pubDate>Sun, 22 Nov 2026 09:30:00 +0100</pubDate>
+   <enclosure url="https://meeluisteren.gergemrijssen.nl/opname/public/rijssen-zuid-even-week-morgendienst.mp3" length="0" type="audio/mpeg"/>
   </item>
   <item>
    <title>Rijssen-Noord: Ds. A.T. Huijser - Het gebed van Elia (1 Koningen 18 41 t m 46 )</title>
